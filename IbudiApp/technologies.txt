@@ -1,0 +1,21 @@
+This document outlines the technologies used in the IbudiApp project.
+
+## Frontend
+
+The application is built using **React Native** with the **Expo** framework. This allows for the development of a cross-platform mobile application (for iOS and Android) from a single JavaScript and TypeScript codebase.
+
+- **React Native:** A JavaScript framework for building native mobile apps.
+- **Expo:** A framework and a platform for universal React applications. It provides a set of tools and services that simplify the development, building, and deployment of React Native apps.
+- **TypeScript:** A typed superset of JavaScript that adds static types to the language, which helps in catching errors early in development.
+- **React Navigation:** The file structure (e.g., `app/_layout.tsx`) suggests the use of Expo's file-based routing, which is built on top of React Navigation for handling navigation and deep linking.
+
+## Backend
+
+Based on the project structure, there is no traditional server-side backend (like Node.js/Express, Python/Django, etc.). The application appears to be a standalone client-side application.
+
+## Database
+
+The application does not use a conventional database (like SQL or NoSQL databases). Instead, it seems to load its data from local files stored within the project itself:
+
+- **JSON Files:** `DATA VSCODE/DATA 1.json` is used as a structured data source.
+- **Excel Files:** `DATA SET EXCEL/IBUDI TERMS VSCODE.xlsx` is also present, suggesting that data might be stored and potentially read from this Excel file.

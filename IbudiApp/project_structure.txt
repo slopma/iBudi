@@ -1,0 +1,40 @@
+This document explains the folder structure of the IbudiApp project. The project follows a standard structure for an Expo (React Native) application.
+
+- **`/` (Root Directory)**
+  - `.gitignore`: Specifies files that Git should ignore.
+  - `app.json`: The main configuration file for the Expo project. It includes settings like the app's name, icon, splash screen, and other metadata.
+  - `package.json`: Lists the project's dependencies (libraries, frameworks) and defines scripts for running tasks (like starting the app).
+  - `tsconfig.json`: The configuration file for the TypeScript compiler, defining how it should check and compile the project's `.ts` and `.tsx` files.
+
+- **`/app`**
+  - This is the core folder for your application's screens and navigation. It uses Expo's file-based routing system.
+  - `_layout.tsx`: Defines the root layout for the app. It's where you would set up global providers (like themes or authentication) and the main navigation structure (e.g., tabs, stack).
+  - `index.js`: Represents the default or home screen of the application, corresponding to the `/` route.
+  - `dictionary.json`: Likely contains a list of terms and definitions used as a data source within the app, probably related to the "IBUDI" theme.
+
+- **`/assets`**
+  - Contains static assets for the application.
+  - `/images`: Holds all the image files, such as icons, logos, and splash screens.
+
+- **`/components`**
+  - This folder contains reusable React components that are used across different screens.
+  - `/ui`: A sub-folder for smaller, general-purpose UI elements (like custom icons or collapsible sections) that form the building blocks of the interface.
+
+- **`/constants`**
+  - Used to store fixed, constant values that are used throughout the app.
+  - `theme.ts`: Likely defines the color palette, font sizes, and other styling values for light and dark modes, ensuring a consistent look and feel.
+
+- **`/DATA SET EXCEL` & `/DATA VSCODE`**
+  - These folders house the application's data. Instead of a traditional database, the app loads data directly from the files within these directories (`.xlsx` and `.json` files).
+
+- **`/hooks`**
+  - Contains custom React hooks. Hooks are reusable functions that let you "hook into" React features, abstracting complex logic away from the UI components.
+  - `use-color-scheme.ts`: A hook to detect the user's preferred color scheme (light/dark).
+  - `use-theme-color.ts`: A custom hook to get specific colors from the theme based on the current color scheme.
+
+- **`/node_modules`**
+  - This directory is automatically generated and contains all the third-party libraries and dependencies that the project relies on. You should not modify this folder directly.
+
+- **`/scripts`**
+  - Contains utility scripts for automating project-related tasks.
+  - `reset-project.js`: A script likely used to reset the project to a clean state, perhaps by clearing caches or resetting the project configuration.
